@@ -1,0 +1,240 @@
+@import url("../../global/CSS/global.css");
+@import "flex-nav.less";
+@import "sw-nav-default.less";
+@import "elements.less";
+@import "sidecar.less";
+
+           /*_mmmmmmmmmmmmmmm_
+        `/ymmmmmmmmmmmmmmmmmmy+.
+      -ymmmmmmmmmmmmmmmmmmmmmmmmy:
+    -hmmmmmmmmmmmmmmmmmmmmmmmmmmmmh:
+   +mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmms
+  smmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmy`
+ ommmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmy
+-mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm:
+smmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmy
+dmmmmmmmm                     mmmmmmmmmm
+dmmmmmmmm    made by speak    mmmmmmmmmm
+dmmmmmmmm                     mmmmmmmmmh
+dmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm/
+dmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmy
+dmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmh`
+dmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmms`
+dmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmd:
+dmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmh/
+dmmmmmmmmmmmmmmmmmmmmmmmmmmmmho-
+dmmmmmmmmmmmmmmmmmmmmmmmmms+:*/
+
+/* ====================== Colors ====================== */
+
+@changeme: #123456;
+
+/* ====================== Base Styles ====================== */
+
+html {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-size: 16px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body.locked {overflow: hidden;}
+
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+    display: block;
+}
+audio, canvas, progress, video {
+    display: inline-block;
+    vertical-align: baseline;
+}
+
+/* Change color & bg color of selected live text */
+*::selection {
+	background-color: ;
+	color: ;
+}
+
+*, *:before, *:after {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.clearfix:before, .clearfix:after {
+    content: " ";
+    display: table;
+}
+.clearfix:after {clear: both;}
+
+/* if using a sticky nav, use this to add space above anchor links to go below navbar */
+*:target:before {
+   display: block;
+   content: "";
+   height: 90px;
+   margin: -90px 0 0;
+}
+
+*:target:before:focus {
+  outline: none!important;
+}
+
+*:target:focus {
+  outline: none;
+}
+
+hr {
+
+}
+
+a, a:visited, a:hover, a:focus, input, input:hover {
+	-webkit-transition: all .33s ease;
+	-moz-transition: all .33s ease;
+	-o-transition: all .33s ease;
+	transition: all .33s ease;
+	text-decoration: none;
+}
+
+/* ====================== Alignment ====================== */
+.center {text-align: center;}
+/* Parent element needs position:relative; */
+.vert-centered {
+	position: absolute;
+	top: 50%;
+	-webkit-transform: translateY(-50%);
+	-moz-transform: translateY(-50%);
+	-ms-transform: translateY(-50%);
+	-o-transform: translateY(-50%);
+	transform: translateY(-50%);
+}
+/* Parent element needs position:relative; */
+.absolute-centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translatex(-50%) translatey(-50%);
+  -moz-transform: translatex(-50%) translatey(-50%);
+  -ms-transform: translatex(-50%) translatey(-50%);
+  -o-transform: translatex(-50%) translatey(-50%);
+  transform: translatex(-50%) translatey(-50%);
+}
+
+/* ====================== Typography ====================== */
+
+.main() {
+	font-family: 'the-font-family', Georgia, serif;
+}
+
+.secondary() {
+	font-family: 'the-font-family', Georgia, serif;
+}
+
+.tertiary() {
+	font-family: 'the-font-family', Georgia, serif;
+}
+
+h1 {
+
+}
+
+h2 {
+
+}
+
+h3 {
+
+}
+
+h4 {
+
+}
+
+h5 {
+
+}
+
+h6 {
+
+}
+
+p {
+
+}
+
+/* Remove excess margin / padding */
+.no-border {border: 0;}
+.no-padding {padding: 0;}
+.no-margin {margin: 0;}
+
+
+/* ====================== Header ====================== */
+
+
+/* ====================== Side Drawer Styling ====================== */
+.body-overlay {
+	display: block;
+	cursor: col-resize;
+	/*background: linear-gradient(30deg, #2e3192, #1bffff);*/
+	background: #888;
+	opacity: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 0;
+	height: 0;
+	z-index: 9998;
+	visibility: hidden;
+	-webkit-transition: opacity .33s ease;
+	-o-transition: opacity .33s ease;
+	-moz-transition: opacity .33s ease;
+	-ms-transition: opacity .33s ease;
+	transition: opacity .33s ease;
+}
+.body-overlay.active {
+	opacity: 0.3;
+	visibility: visible;
+	height: 100%;
+	width: 100%;
+}
+#siteWrapper {
+	position: relative;
+	background-color: #fff;
+	min-height: 100vh;
+}
+
+
+
+/* ====================== Footer ====================== */
+
+footer {
+
+}
+
+
+/* ====================== Arbitrary Breakpoints ====================== */
+
+
+/* Large Screens */
+@media screen and (max-width:1199px) {
+
+}
+
+/* Medium Screens */
+@media screen and (max-width: 991px) {
+
+}
+
+/* Small Screens */
+@media screen and (max-width: 767px) {
+
+}
+
+
+/* XS Screens */
+@media screen and (max-width: 600px) {
+
+}

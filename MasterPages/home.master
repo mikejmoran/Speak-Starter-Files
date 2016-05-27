@@ -1,0 +1,95 @@
+<%@ Master Language="VB" Inherits="BaseMasterPage"%>
+<!DOCTYPE html>
+<html lang="en-us" class="no-js">
+
+<!-- HEAD-->
+<!-- #include file ="includes/head.inc" -->
+<!-- Hello -->
+<body class="home">
+	<form runat="server">
+	<asp:contentplaceholder ID="cphSiteBar" runat="server" visible="true"></asp:contentplaceholder>
+
+	<!-- Sidecar Nav -->
+	<!-- #include file ="includes/sidecar.inc" -->
+
+	<!-- Choose Animation-Direction:  -->
+	<!-- slide-left / slide-right / push-left / push-right / over-left / over-right -->
+	<div id="siteWrapper" class="slide-right" style="overflow:hidden;">
+ 		<div class="body-overlay"></div>
+
+		<!-- HEADER -->
+		<!-- #include file ="includes/header.inc" -->
+
+		<section class="home-main">
+			<div class="container">
+				<!-- Must Use PageBody -->
+				<div class="row">
+					<div class="col-md-8 col-sm-10 col-md-offset-2 col-sm-offset-1">
+						<asp:ContentPlaceHolder ID="cphPageBody" runat="server" visible="true"></asp:ContentPlaceHolder>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- FOOTER -->
+		<!-- #include file ="includes/footer.inc" -->
+
+	</div>
+	<!-- #siteWrapper End -->
+
+	</form>
+
+	<!-- Mega Menu Include -->
+	<!-- <ul id="megadrop" style="display:none;">
+		<div class="row">
+			<div class="col-sm-3 col-xs-6 no-padding">
+				<img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250" />
+			</div>
+			<div class="col-sm-3 col-xs-6 no-padding">
+				<img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250" />
+			</div>
+			<div class="col-sm-3 col-xs-6 no-padding">
+				<img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250" />
+			</div>
+			<div class="col-sm-3 col-xs-6 no-padding">
+				<img class="img-responsive" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=350%C3%97250&w=350&h=250" />
+			</div>
+		</div>
+	<ul> -->
+	<script>
+		// $('nav.sw-nav-default ul#mainnav li#mn-home > ul:first-of-type').addClass('hasMega');
+		// $('ul#megadrop').appendTo('nav.sw-nav-default ul#mainnav > li#mn-home');
+	</script>
+
+
+	<style>
+	/* Bootstrap.css overwrite */
+	.nav-tabs > li.active > a,
+	.nav-tabs > li.active > a:hover,
+	.nav-tabs > li.active > a:focus {background: #ddd!important;}
+
+	.nav-tabs > li.ui-state-active > a {background: #aaa!important;}
+	div.tab-content div.ui-widget-content {display: block;}
+	div.tab-content div.ui-tabs-hide {display: none;}
+	</style>
+
+	<script>
+	$(function() {
+		$( ".nav-tabs-top" ).tabs();
+	});
+	</script>
+	<!-- Custom Helper Script -->
+	<script src="/SiteFiles/xxxx/js/helper.js"></script>
+
+</body>
+</html>
+<!--Add Unused Content Place Holders Below This Line -->
+<asp:ContentPlaceHolder ID="cphSiteSearch" runat="server" visible="false"></asp:ContentPlaceHolder>
+<asp:ContentPlaceHolder ID="cphPageTop" runat="server" visible="false"></asp:ContentPlaceHolder>
+<asp:ContentPlaceHolder ID="cphPageBottom" runat="server" visible="false"></asp:ContentPlaceHolder>
+<asp:ContentPlaceHolder ID="cphListSignup" runat="server" visible="false"></asp:ContentPlaceHolder>
+<asp:ContentPlaceHolder ID="cphPageLeft" runat="server" visible="false"></asp:ContentPlaceHolder>
+<asp:ContentPlaceHolder ID="cphPageRight" runat="server" visible="false"></asp:ContentPlaceHolder>
+<asp:ContentPlaceHolder ID="cphSideMenu" runat="server" visible="false"></asp:ContentPlaceHolder>
+<asp:ContentPlaceHolder ID="cphLevel2Menu" runat="server" visible="false"></asp:ContentPlaceHolder>
+<asp:ContentPlaceHolder ID="cphBreadCrumb" runat="server" visible="false"></asp:ContentPlaceHolder>
