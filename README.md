@@ -6,7 +6,6 @@ A repository for Speak's starter templates, css &amp; js.
 - new nav theme
 - removed min-height from .sitewrapper because of it destroying worlds
 - removed elements.css & elements.less
-- 
 
 <h2>Revisions 5/27/16</h2>
 - sidecar is now a LESS include, for examples see <a href="http://elibrumley.sitewrench.com" target="_blank">elibrumley.sitewrench.com</a>
