@@ -1,0 +1,77 @@
+/* SW Nav Default */
+
+nav.sw-nav-default {
+  display: block;
+  background: #eee;
+  ul#mainnav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    &:before {
+      display: table;
+      content: " ";
+    }
+    &:after {
+      display: table;
+      content: " ";
+      clear: both;
+    }
+    li#mn-home {
+      display: none;
+    }
+    > li {
+      display: block;
+      position: inherit;
+      float: left;
+      z-index: 999;
+      /* 2nd Level ul */
+      a {
+        display: block;
+        text-decoration: none;
+        z-index: 1000;
+        padding: 18px 14px;
+        &:hover {
+          background: #ddd;
+        }
+      }
+      > a.current {
+        background: #ddd;
+      }
+      ul {
+        display: none;
+        position: absolute;
+        width: auto;
+        min-width: 110px;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        z-index: 2000;
+        /* 2nd Level li */
+        li {
+          display: block;
+          position: relative;
+          white-space: nowrap;
+          z-index: 999;
+          /* 3rd level ul */
+          a {
+            background: #eee;
+            padding: 10px 12px;
+            width: 100%;
+            display: inline-block;
+            &:hover {
+              background: #ddd;
+            }
+          }
+          ul {
+            left: 100%;
+            top: 0;
+            /* 3rd level li */
+          }
+        }
+      }
+      &:hover > ul, > ul > li:hover > ul {
+        display: block !important;
+      }
+    }
+  }
+}

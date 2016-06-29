@@ -4,8 +4,7 @@
       <!-- <img class="" src="" alt="" /> -->
     	</a>
     </div>
-    <!-- Nav Class: sw-nav-default | flex-nav -->
-    <nav class="sw-nav-default">
+    <nav class="flex-nav">
       <button type="button" id="drawer-toggle" class="pull-right">
         Open Menu
         <span></span>

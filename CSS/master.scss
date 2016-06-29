@@ -1,8 +1,6 @@
 @import url("../../global/CSS/global.css");
-@import "flex-nav.less";
-@import "sw-nav-default.less";
-@import "elements.less";
-@import "sidecar.less";
+@import "flex-nav.scss";
+@import "sidecar.scss";
 
            /*_mmmmmmmmmmmmmmm_
         `/ymmmmmmmmmmmmmmmmmmy+.
@@ -27,7 +25,7 @@ dmmmmmmmmmmmmmmmmmmmmmmmmms+:*/
 
 /* ====================== Colors ====================== */
 
-@changeme: #123456;
+$changeme: #123456;
 
 /* ====================== Base Styles ====================== */
 
@@ -55,8 +53,8 @@ audio, canvas, progress, video {
 
 /* Change color & bg color of selected live text */
 *::selection {
-	background-color: ;
-	color: ;
+	background-color: $changeme;
+	color: white;
 }
 
 *, *:before, *:after {
@@ -125,24 +123,17 @@ a, a:visited, a:hover, a:focus, input, input:hover {
 
 /* ====================== Typography ====================== */
 
-.main() {
-	font-family: 'the-font-family', Georgia, serif;
-}
+$main:    Helvetica, sans-serif;
 
-.secondary() {
-	font-family: 'the-font-family', Georgia, serif;
-}
+$secondary:    Georgia, serif;
 
-.tertiary() {
-	font-family: 'the-font-family', Georgia, serif;
-}
 
 h1 {
-
+	font-family: $main;
 }
 
 h2 {
-
+	font-family: $secondary;
 }
 
 h3 {
@@ -214,27 +205,58 @@ footer {
 
 }
 
+/* ====================== REM font size with pixel fallback ====================== */
 
-/* ====================== Arbitrary Breakpoints ====================== */
-
-
-/* Large Screens */
-@media screen and (max-width:1199px) {
-
+@function calculateRem($size) {
+  $remSize: $size / 16px;
+  @return $remSize * 1rem;
 }
 
-/* Medium Screens */
-@media screen and (max-width: 991px) {
-
+@mixin font-size($size) {
+  font-size: $size;
+  font-size: calculateRem($size);
 }
 
-/* Small Screens */
-@media screen and (max-width: 767px) {
+/* === Usage === */
+/*p {
+  @include font-size(14px)
+}*/
 
+/* === Output === */
+/*p {
+  font-size: 14px; //Will be overridden if browser supports rem
+  font-size: 0.8rem;
+}*/
+
+/* ====================== Breakpoints ====================== */
+
+@mixin bp-large {
+  @media only screen and (max-width: 60em) {
+    @content;
+  }
 }
 
-
-/* XS Screens */
-@media screen and (max-width: 600px) {
-
+@mixin bp-medium {
+  @media only screen and (max-width: 40em) {
+    @content;
+  }
 }
+
+@mixin bp-small {
+  @media only screen and (max-width: 30em) {
+    @content;
+  }
+}
+
+/* ==== Usage ==== */
+/*.class {
+  width: 60%;
+  float: left;
+  margin: 0 2% 0 0;
+  @include bp-small {
+    width: 100%;
+    float: none;
+    margin: 0;
+  }
+}*/
+/* ==== End ==== */

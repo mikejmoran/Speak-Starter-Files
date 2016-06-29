@@ -15,7 +15,7 @@ $('.body-overlay, .close-drawer').click(function() {
 
 /* ==========================================================================
 ie9 & ie10 browser control (adds body.class)
-========================================================================== */
+========================================================================== */ 
 if (/*@cc_on!@*/false && document.documentMode === 9) {
    document.documentElement.className+=' ie9';
 }
@@ -27,7 +27,7 @@ $(document).ready(function() {
 
 /* ==========================================================================
 Miscellaneous Class Additions
-========================================================================== */
+========================================================================== */	
 
 
 /* ==========================================================================
@@ -35,7 +35,7 @@ Sticky Nav (remove if unneeded)
 ========================================================================== */
 
 // function stickyNavigation(stickyOffsetTop) {
-//     var scrollFromTop = $(window).scrollTop();
+//     var scrollFromTop = $(window).scrollTop(); 
 //     if (scrollFromTop > stickyOffsetTop) {
 //         $('header').addClass('fixed');
 //         $('#home-top').addClass('fixed');
@@ -43,7 +43,7 @@ Sticky Nav (remove if unneeded)
 //     else {
 //         $('header').removeClass('fixed');
 //         $('#home-top').removeClass('fixed');
-//     }
+//     }  
 // }
 // var stickyOffsetTop = $('header').offset().top;
 // stickyNavigation(stickyOffsetTop);
@@ -69,16 +69,19 @@ $('#sidecar .expand').click(function() {
 
 
 /* ==========================================================================
-Adding Body Class based on Breadcrumb
+Open MBS in New Window
+========================================================================== */
+$('.site-credit-link').attr('target','_blank');
+
+/* ==========================================================================
+Adding Body Class based on Breadcrumb 
 ========================================================================== */
 // only works if breadcrumb is set to 'true'
 var currentPage = $("ul#breadcrumb ul li:last-child a").text();
 currentPage = currentPage.toLowerCase().replace(/ /g, '-');
 
-}); //end doc ready
 
-// Change breadcrumb home to a house icon
-$('#breadcrumb #bc-home .first').text('').append('<i class="icon-home"></i>');
+}); //end doc ready
 
 /* ==========================================================================
 Responsive Banner Rotator (Requires 1.7.1 wrap) (remove if unneeded)
@@ -86,7 +89,7 @@ Responsive Banner Rotator (Requires 1.7.1 wrap) (remove if unneeded)
 
 // (function($){
 //    var jQuery = $;
-
+   
 // $(document).ready(function() {
 
 // 	$(window).on('resize load',function() {
@@ -102,3 +105,5 @@ Responsive Banner Rotator (Requires 1.7.1 wrap) (remove if unneeded)
 // });
 
 // })(jQ171);
+
+
